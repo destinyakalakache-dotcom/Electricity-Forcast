@@ -168,7 +168,7 @@ if page == "🎓 Project Details":
     st.markdown("""
         This application demonstrates a **24-hour ahead forecasting model** for **England & Wales Electricity Demand (MW)**. 
         
-        The model uses a **[Random Forest/XGBoost]** algorithm trained on historical time series data. The forecasting task is challenging as it requires capturing complex non-linear relationships and temporal dependencies.
+        The model uses a **XGBoost** algorithm trained on historical time series data. The forecasting task is challenging as it requires capturing complex non-linear relationships and temporal dependencies.
 
         ### Model Inputs
         The model integrates three main categories of features:
@@ -335,4 +335,5 @@ elif page == "⚡ Prediction Tool":
         st.dataframe(forecast_df, use_container_width=True)
     
     st.markdown("---")
+
     st.write("Adjust the exogenous variables and the starting time in the inputs above, then click **'Generate 24-Hour Forecast'** to test different scenarios.")
