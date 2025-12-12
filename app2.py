@@ -197,7 +197,7 @@ elif page == "⚡ Prediction Tool":
         settlement_date = st.date_input("Starting Settlement Date", datetime.now().date())
     with col2:
        
-        settlement_period = st.slider("Starting Settlement Period (1-48)", 1, 48, 24)
+        settlement_period = 1
         
     start_dt = pd.to_datetime(settlement_date) + (settlement_period - 1) * timedelta(minutes=30)
     st.info(f"The 24-hour forecast will begin at: **{start_dt.strftime('%Y-%m-%d %H:%M:%S')}**")
@@ -337,3 +337,4 @@ elif page == "⚡ Prediction Tool":
     st.markdown("---")
 
     st.write("Adjust the exogenous variables and the starting time in the inputs above, then click **'Generate 24-Hour Forecast'** to test different scenarios.")
+
